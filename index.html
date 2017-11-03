@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title></title>
+    <script type="text/javascript" src="/libs/ScreenAdaptation.js"></script>
+    <link rel="stylesheet" href="./src/styles/style.css">
+    <script type="text/javascript">
+        changeFontSizeNewMicoSite();
+    </script>
+</head>
+<body>
+    <div class="main-content" id="content">
+        <div class="form-group">
+            <span class="message-tip">你的宣言<a class="changeWord" onclick="huanyixia();">换一组词</a></span>
+            <input type="text" class="form-control" placeholder="最多十二个字" name="slogan1" id="slogan1" maxlength="12">
+            <input type="text" class="form-control" placeholder="最多十二个字" name="slogan2" id="slogan2" maxlength="12">
+        </div>
+        <div class="form-group">
+            <span class="message-tip">你的高颜值照</span>
+            <button type="button" id="btnGenerate" class="btnUpload">
+                <input id="upload" name="upload" type="file" accept="image/*" onfocus="this.blur()" />
+                <p id="btnText">上传照片</p>
+            </button>
+            <div class="error-prompt" id="error-prompt"></div>
+            <div class="spinner" id="spinner" style="display:none">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+            <button type="button" id="btnConfirm" class="btn-middle" data-track="确认">生成海报</button>
+        </div>
+    </div>
+    <div class="img-box" id="imgBox" style="display: none">
+        <div class="img-wrap">
+            <img src="" class="db-img" id="compose" />
+        </div>
+    </div>
+    <img src="" class="db-img" id="objimg" style="display:none" />
+    <script type="text/javascript">
+        var slogan = [
+            ["用科技改变教育，", "用技术解放校长。"],
+            ["学而不厌", "诲人不倦"],
+            ["教育最伟大的技巧是：", "知所启发。"],
+            ["哥讲的不是寂寞，", "是新概念英语！"],
+            ["教育为公，", "以达天下为公。"],
+            ["善于鼓舞学生，", "是教育中最宝贵的经验。"],
+            ["不愤不启，", "不启不发。"]
+        ];
+
+        function huanyixia() {
+            var n = Math.round(Math.random() * (slogan.length - 1));
+            document.getElementById('slogan1').value = slogan[n][0];
+            document.getElementById('slogan2').value = slogan[n][1];
+        }
+        huanyixia();
+    </script>
+    <script src="./dist/build.js"></script>
+</body>
+
+</html>

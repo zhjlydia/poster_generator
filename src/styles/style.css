@@ -1,0 +1,173 @@
+@charset "utf-8";
+html {min-height: 100%; font-size:62.5%; /* 10÷16=62.5% */font-family: sans-serif; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+body, div, ul, ol, li, dl, dt, dd, input, button, a, img, h1, h2, h3, h4, h5, h6, p, form, pre{margin: 0;}
+ul, ol, li, dl, dt, dd, p, input, button{padding: 0;}
+.clearfix {*zoom: 1;}
+.clearfix:before, .clearfix:after {display: table; content: ""; line-height: 0; }
+.clearfix:after {clear: both;}
+ul,li{list-style: none;}
+a{text-decoration: none;}
+em{font-style: normal;}
+input{border:0;outline:0; -webkit-appearance: none;}
+img{vertical-align:middle;border:0;}
+button{overflow: visible;border: 0;outline: none; background-color: transparent;cursor: pointer;}
+button,select{text-transform: none;}
+textarea{outline: none; resize: none;}
+html,body{width:100%;height:100%;}
+.main-content{
+    background:#fff;
+    width:100%;
+    height:100%;
+    font-size:0.6rem;
+    overflow:hidden;
+    position:relative;
+}
+.error-prompt{
+    width:14.5rem;
+    height:0.6rem;
+    margin:1.2rem auto 0.5rem 0;
+    background:#fff;
+    color:#f08200;
+    text-align:left;
+    font-size:0.55rem;
+}
+.form-control{
+    width:14rem;
+    padding-left:0.5rem;
+    height:1.9rem;
+    border:1px solid #bebebe;
+    color:#333;
+    margin-top:0.7rem;
+    border-radius:3px;
+    font-size:0.65rem;
+}
+.form-group{
+    width:14.5rem;
+    margin:0.75rem auto 0.8rem auto;
+    position:relative;
+}
+.message-tip{
+    display:block;
+    font-size:0.75rem;
+    position:relative;
+}
+.changeWord{
+    position:absolute;
+    right:0;
+    color:#f08200;
+}
+.btnUpload{
+    width:14.5rem;
+    height:1.9rem;
+    border-radius: 3px;
+    border:1px solid #f08200;
+    color:#f08200;
+    text-align:center;
+    position:relative;
+    margin-top:0.6rem;
+    font-size:0.65rem;
+}
+.btnUpload input[type=file]{
+    position:absolute;
+    left:0;
+    top:0;
+    opacity:0;
+    height:100%;
+    width:100%;
+}
+.btn-middle{
+    width:14.5rem;
+    height:1.9rem;
+    border-radius:3px;
+    font-size:0.75rem;
+    background:#f08200;
+    color:#fff;
+    text-align:center;
+    display:block;
+}
+.img-box{
+    padding-bottom:0.8rem;
+}
+.img-wrap {
+    width:14.5rem;
+    margin:0 auto;
+    height:25.74rem;
+}
+.img-wrap img{
+    width:100%;
+    height:100%;
+}
+.toXiaobao{
+    display:block;
+    text-align:center;
+    font-size:0.55rem;
+    color:#7dc9fc;
+    width:100%;
+    font-weight: bold;
+}
+.save-message{
+    font-size:0.75rem;
+    width:12.75rem;
+    padding-left:1.75rem;
+    margin:0.8rem auto 0 auto;
+    color:#f08200;
+    position:relative;
+    height:1.5rem;
+    line-height:1.2rem;
+}
+.save-message i{
+    display:block;
+    position:absolute;
+    width:0.75rem;
+    height:1rem;
+    left:0.6rem;
+    top:0;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    background:url("./images/hand-tip.jpg") no-repeat center center;
+    background-size:100% 100%;
+}
+.spinner {
+  position:absolute;
+  width: 4rem;
+  text-align: center;
+  top:4.6rem;
+  left:3rem;
+}
+ 
+.spinner > div {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #f08200;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+ 
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+ 
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+ 
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+ 
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 40% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
