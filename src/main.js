@@ -1,6 +1,5 @@
 import EXIF from 'exif-js';
 window.onload = function () {
-    //changeFontSizeNewMicoSite();
     function ele(id) {
         return document.getElementById(id);
     }
@@ -21,7 +20,6 @@ window.onload = function () {
         //EXIF js 可以读取图片的元信息 https://github.com/exif-js/exif-js
         EXIF.getData(file, function () {
             make = EXIF.getTag(this, 'Make');
-            //alert(make);
             orientation = EXIF.getTag(this, 'Orientation');
         });
         var reader = new FileReader();
@@ -58,25 +56,8 @@ window.onload = function () {
     };
     //表单校验
     function checkform() {
-        var inputList = document.getElementsByClassName('form-control');
-        for (var i = 0; i < inputList.length; i++) {
-            inputList[i].style.border = "1px solid #bebebe";
-        }
         var errorPrompt = ele('error-prompt');
-        if (ele('slogan1').value.length == 0 && ele('slogan2').value.length == 0) {
-            errorPrompt.innerHTML = "请输入教育初心";
-            ele('slogan1').style.border = '1px solid #f08200';
-            ele('slogan2').style.border = '1px solid #f08200';
-            return false;
-        } else if (ele('slogan1').value.length == 0 && ele('slogan2').value.length > 0) {
-            errorPrompt.innerHTML = "请输入完整的教育初心";
-            ele('slogan1').style.border = '1px solid #f08200';
-            return false;
-        } else if (ele('slogan1').value.length > 0 && ele('slogan2').value.length == 0) {
-            errorPrompt.innerHTML = "请输入完整的教育初心";
-            ele('slogan2').style.border = '1px solid #f08200';
-            return false;
-        } else if (ele('upload').value.length == 0) {
+        if (ele('upload').value.length == 0) {
             errorPrompt.innerHTML = "请上传图片";
             return false;
         }
