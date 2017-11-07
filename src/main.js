@@ -1,4 +1,4 @@
-import EXIF from 'exif-js';
+import EXIF from 'exif-js'
 window.onload = function () {
     function ele(id) {
         return document.getElementById(id);
@@ -16,10 +16,8 @@ window.onload = function () {
         ele('btnText').innerHTML = "上传中...";
         var file = this.files[0];
         var orientation;
-        var make;
         //EXIF js 可以读取图片的元信息 https://github.com/exif-js/exif-js
         EXIF.getData(file, function () {
-            make = EXIF.getTag(this, 'Make');
             orientation = EXIF.getTag(this, 'Orientation');
         });
         var reader = new FileReader();
