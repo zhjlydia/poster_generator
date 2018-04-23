@@ -157,10 +157,10 @@ var poster = {
         var userimgRatio = that.sourceImg.width / that.sourceImg.height; //原始图片的宽高比
         var r = (userimgRatio > imgRatio) ? (canvas.height / that.sourceImg.height) : (canvas.width / that.sourceImg.width);
         var drawObj = {
-            sx: userimgRatio > imgRatio ? (that.sourceImg.width * r - canvas.width) / 2 : 0,
-            sy: userimgRatio > imgRatio ? 0 : (that.sourceImg.height * r - canvas.height) / 2,
-            sWidth: canvas.width,
-            sHeight: canvas.height,
+            sx: userimgRatio > imgRatio ? (that.sourceImg.width - canvas.width/r) / 2 : 0,
+            sy: userimgRatio > imgRatio ? 0 : (that.sourceImg.height - canvas.height/r) / 2,
+            sWidth: canvas.width/r,
+            sHeight: canvas.height/r,
             dx: 0,
             dy: 0,
             dWidth: canvas.width,
