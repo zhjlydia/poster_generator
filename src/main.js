@@ -169,7 +169,7 @@ var poster = {
         //图片居中裁剪
         ctx.drawImage(that.sourceImg, drawObj.sx, drawObj.sy, drawObj.sWidth, drawObj.sHeight, drawObj.dx, drawObj.dy, drawObj.dWidth, drawObj.dHeight);
         var newimg = new Image();
-        newimg.src = "/src/images/poster-bg.png";
+        newimg.src = "/src/images/bg.png";
         newimg.onload = function () {
             ctx.drawImage(newimg, 0, 0, canvas.width, canvas.height);
             ctx.fillStyle = "#fff";
