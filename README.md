@@ -4,7 +4,7 @@ canvas海报生成器
 
 
 
-# react小项目 - canvas海报生成器
+# 原生js小项目 - canvas海报生成器
 
 
 

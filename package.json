@@ -18,14 +18,13 @@
   },
   "homepage": "https://github.com/zhjlydia/poster_generator#readme",
   "dependencies": {
-    "exif-js": "^2.3.0",
-    "babel-polyfill": "^6.26.0"
+    "exif-js": "^2.3.0"
   },
   "devDependencies": {
-    "exif-js": "^2.3.0",
     "babel": "^6.23.0",
     "babel-core": "^6.23.1",
     "babel-loader": "^6.2.4",
+    "babel-polyfill": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.12.0",
     "babel-preset-es2015": "^6.9.0",
     "babel-runtime": "^6.11.6",
